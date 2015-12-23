@@ -1,5 +1,6 @@
 package com.geminno.listviewtest;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -99,28 +100,32 @@ public class ListTestAdapter extends BaseAdapter {
 
 		viewHolder.nameText.setText(mDrugList.get(position).getName());
 		viewHolder.descText.setText(mDrugList.get(position).getPrice()+"元");
+		//viewHolder.countText.setText(mDrugList.get(position).getCount()+"");
 		ImageListener listener = ImageLoader.getImageListener(
 				viewHolder.ivPayCar, R.drawable.ic_launcher,
 				R.drawable.ic_launcher);
 
 		viewHolder.addBtn.setTag(viewHolder);
 		viewHolder.subBtn.setTag(viewHolder);
-
 		// mImageLoader.get(ConstantData.SERVER_URL +
 		// mDrugList.get(position).getImage(), listener, 100, 100);
 
 		viewHolder.addBtn.setOnClickListener(new View.OnClickListener() {
-
+            
 			@Override
 			public void onClick(View v) {
 				String numString = ((ViewHolder) v.getTag()).countText
 						.getText().toString();
 				int count = Integer.parseInt(numString) + 1;
 				((ViewHolder) v.getTag()).countText.setText(count + "");
+//				for(Drug d:mDrugList){
+//				    d.setCount(Integer.parseInt(((ViewHolder) v.getTag()).countText.getText().toString()));
+//				}
+				mDrugList.get(position).setCount(Integer.parseInt(((ViewHolder) v.getTag()).countText.getText().toString()));
 			}
 		});
 		viewHolder.subBtn.setOnClickListener(new View.OnClickListener() {
-
+            
 			@Override
 			public void onClick(View v) {
 				String numString = ((ViewHolder) v.getTag()).countText
@@ -129,18 +134,29 @@ public class ListTestAdapter extends BaseAdapter {
 				if (count > -1) {
 					((ViewHolder) v.getTag()).countText.setText(count + "");
 				}
+//				for(Drug d:mDrugList){
+//				    d.setCount(Integer.parseInt(((ViewHolder) v.getTag()).countText.getText().toString()));
+//				}
+				mDrugList.get(position).setCount(Integer.parseInt(((ViewHolder) v.getTag()).countText.getText().toString()));
 			}
 		});
+		
+			
+//				 mDrugList.get(position).setCount(Integer.parseInt(viewHolder.countText.getText().toString()));
+//		for(Drug d:mDrugList){
+			
+//		}	
+		
+		
 		viewHolder.chkDrug.setTag(position + "");
 		if (mDrugList.get(position).isChecked == 1) {
-			viewHolder.chkDrug.setChecked(true);
+			viewHolder.chkDrug.setChecked(true); 
+			mDrugList.get(position).setCount(Integer.parseInt(viewHolder.countText.getText().toString()));
 		} else {
 			viewHolder.chkDrug.setChecked(false);
 		}
-		
 		viewHolder.chkDrug
 				.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
 					@Override
 					public void onCheckedChanged(CompoundButton buttonView,
 							boolean isChecked) {
@@ -155,6 +171,8 @@ public class ListTestAdapter extends BaseAdapter {
 						}
 					}
 				});
+	
+		
 		return convertView;
 
 	}
@@ -169,5 +187,7 @@ public class ListTestAdapter extends BaseAdapter {
 		EditText countText;
 
 	}
+	
+	
 
 }

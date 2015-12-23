@@ -8,7 +8,6 @@ public class Drug implements Serializable {
 	private double price;
 	public int isChecked;
 	private int count;
-
 	public String getImage() {
 		return image;
 	}

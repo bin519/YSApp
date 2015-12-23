@@ -39,10 +39,6 @@
             android:label="@string/title_activity_splash" >
         </activity>
         <activity
-            android:name="com.geminno.listviewtest.ParCarActivity"
-            android:label="@string/title_activity_par_car" >
-        </activity>
-        <activity
             android:name="com.geminno.activity.DrugUseActivity"
             android:label="@string/title_activity_drug_use"
             android:theme="@style/AppTheme" >
@@ -50,8 +46,9 @@
         </activity>
         <activity
             android:name="com.example.ysapp2.DrugUseManageActivity"
-            android:label="@string/title_activity_drug_use_manage"
-            android:theme="@android:style/Theme.Light.NoTitleBar" >
+            android:label="title_activity_drug_use_manage"
+            android:theme="@style/AppTheme">
+            
         </activity>
     </application>
 

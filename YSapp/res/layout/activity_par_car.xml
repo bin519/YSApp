@@ -79,7 +79,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:paddingRight="10dp"
-            android:text="合计:￥88"
+            android:text="合计:￥0.00元"
             android:textColor="#F63A19" />
         <!-- 去结算的布局 -->
 
