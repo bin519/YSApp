@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- 主界面布局 -->
+    <RadioGroup
+        android:id="@+id/group"
+       android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/home_rectangle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        android:layout_alignParentBottom="true" >
+        <RadioButton
+            android:id="@+id/home"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/home"
+            android:text="首页"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/newscenter"
+             style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/newscenter"
+            android:text="资讯"
+            />
+        <RadioButton
+            android:id="@+id/govaffairs"
+             style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/govaffairs"
+            android:text="购物车"
+             />
+        <RadioButton
+            android:id="@+id/settings"
+             style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/settings"
+            android:text="个人中心"
+          />
+    </RadioGroup>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/group"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

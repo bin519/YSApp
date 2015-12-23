@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">益苏</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_view_pager">ViewPagerActivity</string>
+    <string name="title_activity_content_fragment">ContentFragmentActivity</string>
+    <string name="title_activity_menu_fragment">MenuFragmentActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_par_car">ParCarActivity</string>
+    <string name="title_activity_shopping_cart_adapter">ShoppingCartAdapter</string>
+    <string name="title_activity_shoppingcart">ShoppingCartActivityr</string>
+    <string name="title_activity_drug_use">DrugUseActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_drug_use_manage">DrugUseManageActivity</string>
+
+</resources>

@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+ <LinearLayout   
+          android:layout_width="match_parent"  
+          android:layout_height="50dp"  
+          android:background="#438FCB"  
+          android:orientation="horizontal">  
+            
+          <!-- 尖括号的布局 -->  
+          <ImageView   
+               android:id="@+id/iv_back"
+               android:layout_width="0dp"  
+               android:layout_height="match_parent"  
+               android:layout_weight="2.5"  
+               android:padding="8dp"  
+               android:src="@drawable/comeback" />  
+         <!-- 购物车的布局 -->  
+         <TextView  
+             android:id="@+id/tv_drug_usedetails"
+             android:layout_width="0dp"  
+             android:layout_height="match_parent"  
+             android:layout_weight="18.6"  
+             android:gravity="center"  
+             android:text="用药详情"  
+             android:textColor="#FFFFFF"  
+             android:textSize="20sp"/>  
+        
+    </LinearLayout>  
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_drug_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:text="服药人：" />
+
+    <TextView
+        android:id="@+id/tv_drug_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_drug_use"
+        android:layout_below="@+id/et_drug_use"
+        android:layout_marginTop="26dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:text="药品名：" />
+
+    <EditText
+        android:id="@+id/et_drug_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_alignBottom="@+id/tv_drug_use"
+        android:layout_toRightOf="@+id/tv_drug_use"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="添加用药人" 
+       />
+        
+     <TextView 
+         android:id="@+id/tv_count"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/tv_drug_name"
+         android:layout_marginTop="145dp"
+         android:textSize="20sp"
+         android:text="次数："
+         />
+     <EditText
+         android:id="@+id/et_drug_name"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/tv_drug_name"
+         android:layout_alignLeft="@+id/et_drug_use"
+         android:layout_alignParentRight="true"
+         android:ems="10"
+         android:hint="添加药品" >
+         <requestFocus />
+     </EditText>
+     <EditText 
+         android:id="@+id/et_count"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/tv_count"
+         android:layout_alignLeft="@+id/et_drug_name"
+         android:layout_alignParentRight="true"
+         android:ems="10"
+         android:hint="添加次数"
+         />
+     <TextView 
+         android:id="@+id/tv_dose"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/tv_count"
+         android:layout_marginTop="193dp"
+         android:textSize="20sp"
+         android:text="剂量:"
+         />
+     <EditText 
+         android:id="@+id/et_dose"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/tv_dose"
+         android:layout_alignLeft="@+id/et_count"
+         android:layout_alignParentRight="true"
+         android:ems="10"
+         android:hint="添加剂量"
+         />
+     <TextView 
+         android:id="@+id/tv_date"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/tv_dose"
+         android:layout_marginTop="243dp"
+         android:textSize="20sp"
+         android:text="开始日期"
+         />
+     <EditText 
+         android:id="@+id/et_date"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@+id/tv_date"
+         android:layout_alignLeft="@+id/et_dose"
+         android:layout_alignParentRight="true"
+         android:ems="10"
+         android:inputType="date"
+         android:hint="编辑日期"
+         android:editable="false"
+         />
+      <Button 
+          android:id="@+id/bt_save"
+          android:layout_width="240dp"
+          android:layout_height="wrap_content"
+          android:text="保存"
+          android:layout_centerHorizontal="true"
+          android:background="#438FCB"
+          android:layout_marginTop="323dp"
+          
+          />
+     </RelativeLayout>
+</LinearLayout>

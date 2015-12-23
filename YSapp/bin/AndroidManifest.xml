@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ysapp2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/mystyle" >
+        <activity
+            android:name="com.example.ysapp2.MainActivity"
+            android:label="@string/app_name" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ysapp2.ViewPagerActivity"
+            android:label="@string/title_activity_view_pager" >
+        </activity>
+        <activity
+            android:name="com.example.ysapp2.ContentFragmentActivity"
+            android:label="@string/title_activity_content_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.ysapp2.MenuFragmentActivity"
+            android:label="@string/title_activity_menu_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.sinaweibo.SplashActivity"
+            android:label="@string/title_activity_splash" >
+        </activity>
+        <activity
+            android:name="com.geminno.listviewtest.ParCarActivity"
+            android:label="@string/title_activity_par_car" >
+        </activity>
+        <activity
+            android:name="com.geminno.activity.DrugUseActivity"
+            android:label="@string/title_activity_drug_use"
+            android:theme="@style/AppTheme" >
+           
+        </activity>
+        <activity
+            android:name="com.example.ysapp2.DrugUseManageActivity"
+            android:label="@string/title_activity_drug_use_manage"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+    </application>
+
+</manifest>
